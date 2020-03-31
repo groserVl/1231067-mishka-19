@@ -37,7 +37,7 @@
       <section class="custom-made">
         <h2 class="visually-hidden">Форма заказа</h2>
         <p class="custom-made__subtitle">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="custom-made__form form-order" action="https://echo.htmlacademy.ru" method="get">
+        <form class="custom-made__form form-order" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form-order__type">
             <legend class="form-order__type-caption">Тип</legend>
             <ul class="form-order__type-list">
@@ -85,11 +85,11 @@
             <ul class="form-order__name-list">
               <li class="form-order__name-item">
                 <label class="form-order__label" for="name">Имя:</label>
-                <input class="form-order__input" id="name" type="text" name="name" placeholder="Введите ваше имя*">
+                <input class="form-order__input" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
               </li>
               <li class="form-order__name-item">
                 <label class="form-order__label" for="surname">Фамилия:</label>
-                <input class="form-order__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию*">
+                <input class="form-order__input" id="surname" type="text" name="surname" placeholder="Укажите фамилию*" required>
               </li>
               <li class="form-order__name-item">
                 <label class="form-order__label" for="middlename">Отчество:</label>
@@ -100,17 +100,17 @@
           <fieldset class="form-order__tel">
             <legend class="form-order__tel-caption">Тел</legend>
             <label class="visually-hidden form-order__label" for="tel">Телефон</label>
-            <input class="form-order__input" id="tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            <input class="form-order__input" id="tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           </fieldset>
           <fieldset class="form-order__email">
             <legend class="form-order__email-caption">E-mail</legend>
             <label class="visually-hidden form-order__label" for="email">Почта</label>
-            <input class="form-order__input" id="email" type="email" name="email" placeholder="Ваш Email*">
+            <input class="form-order__input" id="email" type="email" name="email" placeholder="Ваш Email*" required>
           </fieldset>
           <fieldset class="form-order__text">
             <legend class="form-order__text-caption">Доп</legend>
             <label class="visually-hidden form-order__label" for="text">Пожелания к заказу</label>
-            <textarea class="form-order__textarea" id="text" cols="30" rows="10">Опишите все ваши пожелания к заказу</textarea>
+            <textarea class="form-order__textarea" id="text" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
           <p>*Поля обязательны для заполнения</p>
           <button class="form-order__button button" type="submit">Отправить заказ</button>
