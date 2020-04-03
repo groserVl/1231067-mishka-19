@@ -1,0 +1,36 @@
+.about {
+  background-color: @bg;
+}
+
+.about__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: @black;
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.about__item {
+  width: 200px;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: @black;
+
+  &:nth-child(1) {
+    width: 190px;
+  }
+
+  &:nth-child(4),
+  &:nth-child(5) {
+    width: 250px;
+  }
+}
