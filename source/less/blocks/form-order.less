@@ -1,10 +1,7 @@
 .form-order__type-list,
 .form-order__color-list,
 .form-order__name-list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  .list-reset();
 }
 
 .form-order__fieldset {
@@ -38,8 +35,8 @@
   font-size: 19px;
 }
 
-.form-order__input::-webkit-input-placeholder,
-.form-order__textarea::-webkit-input-placeholder {
+.form-order__input::placeholder,
+.form-order__textarea::placeholder {
   color: rgba(68, 68, 68, 0.3);
 }
 
