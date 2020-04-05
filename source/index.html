@@ -132,5 +132,29 @@
       </div>
     </footer>
 
+    <section class="modal-cart container">
+      <h2 class="modal-cart__title">Добавить в корзину</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="modal-cart__fieldset">
+          <legend class="modal-cart__legend">Выберите размер:</legend>
+          <ul class="modal-cart__list">
+            <li class="modal-cart__small">
+              <input class="modal-cart__input" id="small" type="radio" name="size" value="small" checked>
+              <label class="modal-cart__label" for="small">S</label>
+            </li>
+            <li class="modal-cart__middle">
+              <input class="modal-cart__input" id="middle" type="radio" name="size" value="middle">
+              <label class="modal-cart__label" for="middle">M</label>
+            </li>
+            <li class="modal-cart__long">
+              <input class="modal-cart__input" id="long" type="radio" name="size" value="long">
+              <label class="modal-cart__label" for="long">L</label>
+            </li>
+          </ul>
+          <button class="modal-cart__button button button--cart" type="submit">Добавить</button>
+        </fieldset>
+      </form>
+    </section>
+
   </body>
 </html>
