@@ -1,4 +1,6 @@
 .about__title {
+  margin: 0;
+
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
@@ -17,13 +19,40 @@
   font-size: 17px;
   line-height: 20px;
   color: @black;
+}
 
-  &:nth-child(1) {
-    width: 190px;
+.about__item--materials {
+  width: 190px;
+}
+
+.about__item--manual,
+.about__item--support {
+  width: 250px;
+}
+
+@media (min-width: @tablet-width) {
+  .about {
+    .container-tablet();
   }
 
-  &:nth-child(4),
-  &:nth-child(5) {
-    width: 250px;
+  .about__list {
+    display: flex;
+  }
+
+  .about__wrapper-left,
+  .about__wrapper-right {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    .container-desktop();
+  }
+
+  .about__title,
+  .about__list {
+    width: 700px;
+    margin: 0 auto;
   }
 }

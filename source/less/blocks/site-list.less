@@ -1,4 +1,6 @@
 .site-list {
+  .list-reset();
+
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -9,4 +11,13 @@
 
 .site-list__item-link {
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 15px;
+  }
 }

@@ -1,3 +1,20 @@
 .product-cards__list {
   .list-reset();
 }
+
+@media (min-width: @tablet-width) {
+  .product-cards {
+    .container-tablet();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-cards {
+    .container-desktop();
+
+    .product-cards__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

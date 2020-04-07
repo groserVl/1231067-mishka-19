@@ -1,4 +1,6 @@
 .card__title {
+  margin: 0;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -6,13 +8,46 @@
 }
 
 .card__characteristics {
+  margin: 0;
+
   font-size: 13px;
   line-height: 30px;
 }
 
 .card__price {
+  margin: 0;
+
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
   color: @black;
+}
+
+.card__wrapper-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: @tablet-width) {
+  .card {
+    display: flex;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .card__characteristics {
+    font-size: 15px;
+  }
+
+  .card__price {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card {
+    display: block;
+  }
 }
