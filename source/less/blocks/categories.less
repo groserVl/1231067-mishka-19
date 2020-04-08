@@ -15,33 +15,14 @@
   text-align: center;
 }
 
-.categories__list {
-  .list-reset();
+@media (min-width: @tablet-width) {
+  .categories {
+    .container-tablet();
+  }
 }
 
-.categories__item {
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 24px;
-}
-
-.categories__item--interior {
-  background-color: @blue;
-}
-
-.categories__item--toys {
-  background-color: @darkblue;
-}
-
-.categories__item-link {
-  display: inline-block;
-  width: 110px;
-
-  color: @bg;
-}
-
-.categories__item-wrapper {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 30px;
+@media (min-width: @desktop-width) {
+  .categories {
+    .container-desktop();
+  }
 }

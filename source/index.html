@@ -10,24 +10,39 @@
 
     <header class="page-header container">
       <nav class="page-header__nav main-nav">
-        <a class="main-nav__logo">
-          <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина игрушек ручной работы «Мишка»">
-        </a>
-        <button class=" main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list site-list">
+        <div class="main-nav__wrapper-logo">
+          <a class="main-nav__logo">
+            <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина игрушек ручной работы «Мишка»">
+          </a>
+          <button class=" main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <ul class="main-nav__site-list site-list">
           <li class="site-list__item">
-            <a class="site-list__item-link" href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__item-link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__item-link" href="#">Поиск по сайту</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__item-link" href="#">Корзина: пока пуста</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
+        <div class="main-nav__wrapper-top">
+          <div class="search">
+            <a class="search__link" href="#"><span class="search__link-text">Поиск по сайту</span></a>
+          </div>
+          <div class="cart">
+            <a class="cart__link" href="#">Корзина: пока пуста</a>
+          </div>
+        </div>
+        <ul class="main-nav__promo-list promo-list">
+          <li class="promo-list__item">
+            <a class="promo-list__link" href="#">Новые поступления</a>
+          </li>
+          <li class="promo-list__item">
+            <a class="promo-list__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-nav__service">Бесплатная доставка по России</p>
       </nav>
     </header>
 
@@ -37,51 +52,61 @@
 
       <section class="categories">
         <h2 class="categories__title">Милые штуки ручной <br> работы для дома</h2>
-        <ul class="categories__list">
-          <li class="categories__item categories__item--interior">
-            <div class="categories__item-wrapper">
-              <a class="categories__item-link" href="#">Предметы интерьера</a>
+        <ul class="categories__items list-categories">
+          <li class="list-categories__item list-categories__item--interior">
+            <div class="list-categories-wrapper">
+              <a class="list-categories-link" href="#">Предметы интерьера</a>
             </div>
           </li>
-          <li class="categories__item categories__item--toys">
-            <div class="categories__item-wrapper"><a class="categories__item-link" href="#">Детские игрушки</a></div>
+          <li class="list-categories__item list-categories__item--toys">
+            <div class="list-categories-wrapper">
+              <a class="list-categories-link" href="#">Детские игрушки</a>
+            </div>
           </li>
         </ul>
       </section>
 
       <section class="promo-baskets container">
-        <h2 class="promo-baskets__title">Вязаные корзинки</h2>
-        <p class="promo-baskets__subtitle">Товар недели</p>
-        <p class="promo-baskets__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="promo-baskets__specifications">
-          <caption class="visually-hidden">Характеристики вязанных корзинок</caption>
-          <tr>
-            <th class="promo-baskets__property">Цвет:</th>
-            <td class="promo-baskets__value">«Тиффани»/серый</td>
-          </tr>
-          <tr>
-            <th class="promo-baskets__property">Диаметр:</th>
-            <td class="promo-baskets__value">25 см</td>
-          </tr>
-          <tr>
-            <th class="promo-baskets__property">Высота:</th>
-            <td class="promo-baskets__value">15 см</td>
-          </tr>
-        </table>
-        <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки - товар недели">
-        <p class="promo-baskets__price">Цена: 990 руб.</p>
-        <a class="promo-baskets__order button" href="#">Заказать</a>
+        <div class="promo-baskets__wrapper-title">
+          <h2 class="promo-baskets__title">Вязаные корзинки</h2>
+          <p class="promo-baskets__subtitle">Товар недели</p>
+        </div>
+        <div class="promo-backets__wrapper-text">
+          <p class="promo-baskets__text">Экологически чистая пряжа, <br> ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="promo-baskets__specifications">
+            <caption class="visually-hidden">Характеристики вязанных корзинок</caption>
+            <tr>
+              <th class="promo-baskets__property">Цвет:</th>
+              <td class="promo-baskets__value">«Тиффани»/серый</td>
+            </tr>
+            <tr>
+              <th class="promo-baskets__property">Диаметр:</th>
+              <td class="promo-baskets__value">25 см</td>
+            </tr>
+            <tr>
+              <th class="promo-baskets__property">Высота:</th>
+              <td class="promo-baskets__value">15 см</td>
+            </tr>
+          </table>
+        </div>
+        <div class="promo-baskets__image">
+          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки - товар недели">
+        </div>
+        <div>
+          <p class="promo-baskets__price">Цена: 990 руб.</p>
+          <a class="promo-baskets__order button" href="form.html">Заказать</a>
+        </div>
       </section>
 
       <section class="about container">
         <h2 class="about__title">Коротко о нас:</h2>
         <ul class="about__list">
-          <li class="about__item about__item--materials">Экологически чистые материалы</li>
-          <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
-          <li class="about__item about__item--likes">Увеличивает лайки на фотографиях</li>
-          <li class="about__item about__item--manual">Связано вручную с любовью и умилением</li>
-          <li class="about__item about__item--support">Поддержка отечественного производителя</li>
-          <li class="about__item about__item--packaging">Поставляется в подарочной упаковке</li>
+            <li class="about__item about__item--materials">Экологически <br> чистые материалы</li>
+            <li class="about__item about__item--style">Скандинавский стиль <br> по российской цене</li>
+            <li class="about__item about__item--likes">Увеличивает лайки <br> на фотографиях</li>
+            <li class="about__item about__item--manual">Связано вручную с <br> любовью и умилением</li>
+            <li class="about__item about__item--support">Поддержка отечественного производителя</li>
+            <li class="about__item about__item--packaging">Поставляется в <br> подарочной упаковке</li>
         </ul>
       </section>
 
@@ -113,22 +138,27 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__social social container">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Мы в Инстаграме</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы в Фейсбуке</span></a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://www.twitter.com.com/htmlacademy"><span class="visually-hidden">Мы в Твитере</span></a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright container">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link copyright__link--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo">
+          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="102" height="34" alt="Логотип интернет-магазина игрушек ручной работы «Мишка»">
+        </a>
+        <div class="page-footer__social social container">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"><span class="">Мы в Инстаграме</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"><span class="">Мы в Фейсбуке</span></a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="https://www.twitter.com.com/htmlacademy"><span class="">Мы в Твитере</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright container">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link copyright__link--htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"><span class="">HTML Academy</span></a>
+        </div>
       </div>
     </footer>
 

@@ -1,3 +1,31 @@
 .page-footer {
   background-color: @gray;
 }
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__wrapper {
+    .container-tablet();
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo,
+  .page-footer__social,
+  .page-footer__copyright {
+    width: 33%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    .container-desktop();
+  }
+}
