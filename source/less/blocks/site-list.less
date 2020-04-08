@@ -1,15 +1,12 @@
 .site-list {
   .list-reset();
+}
 
+.site-list__link {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   list-style: none;
-
-  background-color: @bg;
-}
-
-.site-list__item-link {
   color: @black;
 }
 
@@ -17,7 +14,20 @@
   .site-list {
     display: flex;
     justify-content: space-between;
+    width: 310px;
+  }
 
+  .site-list__link {
     font-size: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 380px;
+  }
+
+  .site-list__link {
+    font-size: 17px;
   }
 }

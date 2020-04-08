@@ -10,39 +10,39 @@
 
     <header class="page-header container">
       <nav class="page-header__nav main-nav">
-        <a class="main-nav__logo">
-          <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина игрушек ручной работы «Мишка»">
-        </a>
-        <button class=" main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper-logo">
+          <a class="main-nav__logo">
+            <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина игрушек ручной работы «Мишка»">
+          </a>
+          <button class=" main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <ul class="main-nav__site-list site-list">
           <li class="site-list__item">
-            <a class="site-list__item-link" href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__item-link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__item-link" href="#">Поиск по сайту</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__item-link" href="#">Корзина: пока пуста</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <div class="main-nav__wrapper-bottom">
-          <div class="main-nav__promo-list">
-            <ul class="promo-list">
-              <li>
-                <a class="promo-list__link" href="#">Новые поступления</a>
-              </li>
-              <li>
-                <a class="promo-list__link" href="#">Распродажа</a>
-              </li>
-            </ul>
+        <div class="main-nav__wrapper-top">
+          <div class="search">
+            <a class="search__link" href="#"><span class="search__link-text">Поиск по сайту</span></a>
           </div>
-          <ul class="main-nav__service-list service-list">
-            <li class="service-list__item">Бесплатная доставка по России</li>
-          </ul>
+          <div class="cart">
+            <a class="cart__link" href="#">Корзина: пока пуста</a>
+          </div>
         </div>
+        <ul class="main-nav__promo-list promo-list">
+          <li class="promo-list__item">
+            <a class="promo-list__link" href="#">Новые поступления</a>
+          </li>
+          <li class="promo-list__item">
+            <a class="promo-list__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="main-nav__service">Бесплатная доставка по России</p>
       </nav>
     </header>
 
@@ -53,12 +53,12 @@
       <section class="categories">
         <h2 class="categories__title">Милые штуки ручной <br> работы для дома</h2>
         <ul class="categories__items list-categories">
-          <li class="list-categories__item list-categories--interior">
+          <li class="list-categories__item list-categories__item--interior">
             <div class="list-categories-wrapper">
               <a class="list-categories-link" href="#">Предметы интерьера</a>
             </div>
           </li>
-          <li class="list-categories__item list-categories--toys">
+          <li class="list-categories__item list-categories__item--toys">
             <div class="list-categories-wrapper">
               <a class="list-categories-link" href="#">Детские игрушки</a>
             </div>
@@ -67,12 +67,12 @@
       </section>
 
       <section class="promo-baskets container">
-        <div>
+        <div class="promo-baskets__wrapper-title">
           <h2 class="promo-baskets__title">Вязаные корзинки</h2>
           <p class="promo-baskets__subtitle">Товар недели</p>
         </div>
-        <div>
-          <p class="promo-baskets__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <div class="promo-backets__wrapper-text">
+          <p class="promo-baskets__text">Экологически чистая пряжа, <br> ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="promo-baskets__specifications">
             <caption class="visually-hidden">Характеристики вязанных корзинок</caption>
             <tr>
@@ -89,26 +89,24 @@
             </tr>
           </table>
         </div>
-        <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки - товар недели">
+        <div class="promo-baskets__image">
+          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки - товар недели">
+        </div>
         <div>
           <p class="promo-baskets__price">Цена: 990 руб.</p>
-          <a class="promo-baskets__order button" href="#">Заказать</a>
+          <a class="promo-baskets__order button" href="form.html">Заказать</a>
         </div>
       </section>
 
       <section class="about container">
         <h2 class="about__title">Коротко о нас:</h2>
         <ul class="about__list">
-          <div class="about__wrapper-left">
-            <li class="about__item about__item--materials">Экологически чистые материалы</li>
-            <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
-            <li class="about__item about__item--likes">Увеличивает лайки на фотографиях</li>
-          </div>
-          <div class="about__wrapper-right">
-            <li class="about__item about__item--manual">Связано вручную с любовью и умилением</li>
+            <li class="about__item about__item--materials">Экологически <br> чистые материалы</li>
+            <li class="about__item about__item--style">Скандинавский стиль <br> по российской цене</li>
+            <li class="about__item about__item--likes">Увеличивает лайки <br> на фотографиях</li>
+            <li class="about__item about__item--manual">Связано вручную с <br> любовью и умилением</li>
             <li class="about__item about__item--support">Поддержка отечественного производителя</li>
-            <li class="about__item about__item--packaging">Поставляется в подарочной упаковке</li>
-          </div>
+            <li class="about__item about__item--packaging">Поставляется в <br> подарочной упаковке</li>
         </ul>
       </section>
 
@@ -142,7 +140,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo">
-          <img class="main-nav__logo-image" src="img/logo-footer.svg" width="102" height="34" alt="Логотип интернет-магазина игрушек ручной работы «Мишка»">
+          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="102" height="34" alt="Логотип интернет-магазина игрушек ручной работы «Мишка»">
         </a>
         <div class="page-footer__social social container">
           <ul class="social__list">

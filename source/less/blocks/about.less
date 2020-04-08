@@ -12,22 +12,12 @@
 }
 
 .about__item {
-  width: 200px;
   margin-bottom: 30px;
 
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   color: @black;
-}
-
-.about__item--materials {
-  width: 190px;
-}
-
-.about__item--manual,
-.about__item--support {
-  width: 250px;
 }
 
 @media (min-width: @tablet-width) {
@@ -37,22 +27,45 @@
 
   .about__list {
     display: flex;
+    flex-wrap: wrap;
   }
 
-  .about__wrapper-left,
-  .about__wrapper-right {
+  .about__item {
     width: 50%;
+
+    font-size: 20px;
+    line-height: 22px;
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      order: 4;
+    }
+
+    &:nth-child(5) {
+      order: 3;
+    }
+
+    &:nth-child(6) {
+      order: 5;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .about {
     .container-desktop();
-  }
 
-  .about__title,
-  .about__list {
-    width: 700px;
-    margin: 0 auto;
+    .about__title {
+      margin-left: 175px;
+    }
+
+    .about__list {
+      width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

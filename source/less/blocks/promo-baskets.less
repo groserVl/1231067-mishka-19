@@ -1,4 +1,6 @@
 .promo-baskets__title {
+  margin: 0;
+
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
@@ -6,11 +8,21 @@
 }
 
 .promo-baskets__subtitle {
+  margin: 0;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   color: @blue;
   text-transform: uppercase;
+}
+
+.promo-baskets__wrapper-title {
+  margin-bottom: 30px;
+}
+
+.promo-baskets__text {
+  margin: 0;
 }
 
 .promo-baskets__property {
@@ -21,4 +33,62 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo-baskets {
+    position: relative;
+
+    .container-tablet();
+  }
+
+  .promo-baskets__wrapper-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .promo-baskets__title {
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .promo-baskets__subtitle {
+    width: 100px;
+    padding-right: 30px;
+
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .promo-baskets__text {
+    width: 285px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .promo-baskets__image {
+    position: absolute;
+    top: 110px;
+    right: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo-baskets {
+    .container-desktop();
+  }
+
+  .promo-baskets__wrapper-title {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .promo-baskets__image {
+    z-index: -1;
+  }
 }
