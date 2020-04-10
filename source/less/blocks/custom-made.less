@@ -1,5 +1,32 @@
+.page-main {
+  overflow: hidden;
+}
+
 .custom-made__subtitle {
+  margin: 0;
   margin-bottom: 30px;
 
   font-size: 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .custom-made {
+    .container-tablet();
+  }
+
+  .custom-made__subtitle {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .custom-made {
+    .container-desktop();
+  }
+
+  .custom-made__subtitle {
+    width: 675px;
+    margin-left: 175px;
+  }
 }

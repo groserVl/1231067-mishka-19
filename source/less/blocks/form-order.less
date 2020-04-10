@@ -24,23 +24,122 @@
   line-height: 20px;
 }
 
-.form-order__input,
-.form-order__textarea {
-  font-size: 17px;
-  line-height: 20px;
-  color: rgba(68, 68, 68, 0.3);
-}
-
-.form-order__input--tel {
+.form-order__fieldset-tel .form-order__input {
   font-size: 19px;
 }
 
 .form-order__input::placeholder,
 .form-order__textarea::placeholder {
+  font-size: 17px;
+  line-height: 20px;
   color: rgba(68, 68, 68, 0.3);
 }
 
 .form-order__correction {
   font-size: 14px;
   line-height: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-order__wrapper-fieldset {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .form-order__item {
+    width: 500px;
+  }
+
+  .form-order__color-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+  }
+
+  .form-order__color-list .form-order__item {
+    width: 50%;
+  }
+
+  .form-order__label {
+
+    font-size: 19px;
+  }
+
+  .form-order__fieldset-tel .form-order__input,
+  .form-order__fieldset-email .form-order__input,
+  .form-order__textarea {
+    width: 500px;
+  }
+
+  .form-order__fieldset-tel .form-order__wrapper-fieldset {
+    padding-bottom: 25px;
+  }
+
+  .form-order__fieldset-email .form-order__wrapper-fieldset {
+    padding-top: 0;
+  }
+
+  .form-order__wrapper-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-order__correction {
+    order: 1;
+
+    font-size: 17px;
+  }
+
+  .form-order__wrapper-fieldset--gray {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+
+      background-color: @gray;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-order__wrapper-fieldset {
+    justify-content: flex-start;
+  }
+
+  .form-order__color-list {
+    width: 750px;
+  }
+
+  .form-order__color-list .form-order__item {
+    width: 33%;
+  }
+
+  .form-order__legend {
+    width: 175px;
+    padding-left: 62px;
+  }
+
+  .form-order__item,
+  .form-order__fieldset-tel .form-order__input,
+  .form-order__fieldset-email .form-order__input,
+  .form-order__textarea {
+    width: 700px;
+  }
+
+  .form-order__wrapper-bottom {
+    width: 700px;
+    margin-left: 175px;
+  }
 }
