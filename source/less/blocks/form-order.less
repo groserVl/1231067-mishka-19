@@ -11,11 +11,30 @@
 }
 
 .form-order__legend {
+  width: 100%;
+}
+
+.form-order__legend-text {
+  display: flex;
+  align-items: center;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   color: @blue;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+
+    flex-grow: 1;
+
+    width: 10px;
+    height: 1px;
+    margin-left: 25px;
+
+    background-color: @blue;
+  }
 }
 
 .form-order__label {
@@ -41,11 +60,24 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form-order__wrapper-fieldset {
-    display: flex;
-    justify-content: space-between;
+  .form-order__fieldset {
+    position: relative;
+
+    padding-left: 167px;
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+
+  .form-order__legend {
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+
+  .form-order__legend-text {
+    &::after {
+      display: none;
+    }
   }
 
   .form-order__item {
@@ -73,14 +105,6 @@
     width: 500px;
   }
 
-  .form-order__fieldset-tel .form-order__wrapper-fieldset {
-    padding-bottom: 25px;
-  }
-
-  .form-order__fieldset-email .form-order__wrapper-fieldset {
-    padding-top: 0;
-  }
-
   .form-order__wrapper-bottom {
     display: flex;
     justify-content: space-between;
@@ -92,7 +116,7 @@
     font-size: 17px;
   }
 
-  .form-order__wrapper-fieldset--gray {
+  .form-order__fieldset--gray {
     position: relative;
 
     &::before {
@@ -114,8 +138,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form-order__wrapper-fieldset {
-    justify-content: flex-start;
+  .form-order__legend {
+    left: 65px;
   }
 
   .form-order__color-list {
@@ -124,11 +148,6 @@
 
   .form-order__color-list .form-order__item {
     width: 33%;
-  }
-
-  .form-order__legend {
-    width: 175px;
-    padding-left: 62px;
   }
 
   .form-order__item,
