@@ -71,7 +71,7 @@
           <h2 class="promo-baskets__title">Вязаные корзинки</h2>
           <p class="promo-baskets__subtitle">Товар недели</p>
         </div>
-        <div class="promo-backets__wrapper-text">
+        <div class="promo-baskets__wrapper-text">
           <p class="promo-baskets__text">Экологически чистая пряжа, <br> ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="promo-baskets__specifications">
             <caption class="visually-hidden">Характеристики вязанных корзинок</caption>
@@ -110,28 +110,40 @@
         </ul>
       </section>
 
-      <section class="reviews container">
-        <h2 class="reviews__title">Отзывы</h2>
+      <section class="reviews">
+        <div class="reviews__wrapper container">
+          <h2 class="reviews__title">Отзывы</h2>
           <blockquote class="reviews__item">
             <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             <cite class="reviews__author-name">Анастасия Красильникова <span class="reviews__author-nick">@misssssiskras</span></cite>
           </blockquote>
-          <button class="reviews__prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
-          <button class="reviews__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+          <div class="reviews__wrapper-buttons">
+            <button class="reviews__prev" type="button">
+              <span class="visually-hidden">Предыдущий отзыв</span>
+            </button>
+            <button class="reviews__next" type="button">
+              <span class="visually-hidden">Следующий отзыв</span>
+            </button>
+          </div>
           <a class="reviews__write button" href="#">Написать</a>
+        </div>
       </section>
 
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__email">
-          <span class="contacts__email-intro">e-mail:</span>
-          <a class="contacts__email-text" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-        </p>
-        <p class="contacts__address">
-          <span class="contacts__address-intro">адрес</span>
-          <span class="contacts__address-text">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
-        </p>
-        <img class="contacts__map" src="img/map-mobile@1x.jpg" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+        <h2 class="contacts__title container">Контакты</h2>
+        <div class="contacts__wrapper-text container">
+          <p class="contacts__email">
+            <span class="contacts__email-intro">e-mail:</span>
+            <a class="contacts__email-text" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </p>
+          <p class="contacts__address">
+            <span class="contacts__address-intro">адрес:</span>
+            <span class="contacts__address-text">г. Санкт-Петербург, <br> ул. Большая Конюшенная, <br> д. 19/8, офис 101</span>
+          </p>
+        </div>
+        <div class="contacts__map">
+          <img class="contacts__map-image" src="img/map-mobile@1x.jpg" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+        </div>
         <a class="contacts__write button" href="#">Напишите нам</a>
       </section>
 

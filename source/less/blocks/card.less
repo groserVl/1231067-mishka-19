@@ -1,3 +1,13 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__link-img {
+  width: 260px;
+  height: 195px;
+}
+
 .card__title {
   margin: 0;
 
@@ -30,7 +40,7 @@
 
 @media (min-width: @tablet-width) {
   .card {
-    display: flex;
+    flex-direction: row;
   }
 
   .card__title {
