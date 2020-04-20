@@ -1,12 +1,23 @@
+.page-header {
+  overflow: hidden;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
-    width: 768px;
-    padding: 0 50px;
+    .container-tablet();
+    width: auto;
+
+    background-color: #f9f9f9;
+  }
+
+  .inner-pages .page-header {
+    background-color: #f1f1f1;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    width: 1150px;
+    width: auto;
+    padding: 0;
   }
 }

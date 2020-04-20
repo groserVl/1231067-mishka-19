@@ -1,20 +1,40 @@
 .product-cards__list {
   .list-reset();
+  margin-top: 30px;
 }
 
 @media (min-width: @tablet-width) {
   .product-cards {
     .container-tablet();
+    margin-top: 78px;
+  }
+
+  .product-cards__list {
+    margin: 0;
+  }
+
+  .product-cards__item {
+    margin-bottom: 55px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .product-cards {
     .container-desktop();
+    margin-top: 130px;
+  }
 
-    .product-cards__list {
-      display: flex;
-      flex-wrap: wrap;
+  .product-cards__list {
+    display: flex;
+  }
+
+  .product-cards__item {
+    display: flex;
+    margin: 0;
+    margin-right: 51px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
     }
   }
 }
