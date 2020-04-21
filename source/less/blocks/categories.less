@@ -29,13 +29,14 @@
       content: "";
 
       position: absolute;
-      bottom: -10px;
+      bottom: -12px;
+      right: 0;
       left: 0;
 
-      width: 100%;
       height: 24px;
 
-      background-image: url("../img/bg-zigzag-fill-tab.svg");
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
     }
   }
 
@@ -61,13 +62,12 @@
 @media (min-width: @desktop-width) {
   .categories::after {
     bottom: -17px;
-    left: 13px;
 
-    width: 1250px;
     height: 34px;
 
     background-image: url("../img/bg-zigzag-fill.svg");
-    background-size: cover;
+    background-position: 13px 0px;
+    background-size: 1250px auto;
   }
 
   .categories__wrapper {
