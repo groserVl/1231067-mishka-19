@@ -8,7 +8,22 @@
   height: 195px;
 }
 
+.card__wrapper-text {
+  margin-bottom: 30px;
+  padding-top: 26px;
+  padding-bottom: 28px;
+
+  border: 1px solid #ececec;
+}
+
+.card__link-title {
+  display: block;
+  margin-left: 28px;
+  margin-bottom: 5px;
+}
+
 .card__title {
+  width: 200px;
   margin: 0;
 
   font-weight: 700;
@@ -19,9 +34,23 @@
 
 .card__characteristics {
   margin: 0;
+  margin-left: 28px;
+  margin-bottom: 18px;
 
   font-size: 13px;
   line-height: 30px;
+}
+
+.card__wrapper-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 204px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+
+  border-top: 1px solid #ececec;
 }
 
 .card__price {
@@ -33,22 +62,58 @@
   color: @black;
 }
 
-.card__wrapper-price {
-  display: flex;
-  justify-content: space-between;
+.card__cart {
+  width: 20px;
+  height: 19px;
+
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
 }
+
 
 @media (min-width: @tablet-width) {
   .card {
     flex-direction: row;
   }
 
+  .card__link-img {
+    width: 334px;
+    height: 334px;
+
+    background: rgba(210, 105, 30, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(210, 105, 30);
+  }
+
+  .card__wrapper-text {
+    display: flex;
+    flex-direction: column;
+    width: 334px;
+    margin-bottom: 0;
+    padding-bottom: 26px;
+  }
+
   .card__title {
+    width: 235px;
+
     font-size: 20px;
   }
 
+  .card__link-title {
+    margin-left: 25px;
+  }
+
   .card__characteristics {
+    width: 270px;
+    margin-left: 25px;
+    margin-bottom: auto;
+
     font-size: 15px;
+  }
+
+  .card__wrapper-price {
+    width: 268px;
   }
 
   .card__price {
@@ -58,6 +123,24 @@
 
 @media (min-width: @desktop-width) {
   .card {
-    display: block;
+    flex-direction: column;
+  }
+
+  .card__link-img {
+    width: 316px;
+    height: 462px;
+  }
+
+  .card__wrapper-text {
+    flex-grow: 1;
+    width: auto;
+    min-height: 197px;
+    padding-top: 25px;
+  }
+
+  .card__wrapper-price {
+    width: 260px;
+    padding-top: 25px;
+    padding-right: 5px;
   }
 }

@@ -1,9 +1,16 @@
+.promo-baskets {
+  margin-bottom: 45px;
+
+  border: 1px solid transparent;
+}
+
 .promo-baskets__title {
   margin: 0;
+  margin-bottom: 5px;
 
   font-weight: 700;
   font-size: 25px;
-  line-height: 30px;
+  line-height: 27px;
   color: @black;
 }
 
@@ -18,21 +25,56 @@
 }
 
 .promo-baskets__wrapper-title {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
+
+  borde: 1px solid transparent;
 }
 
 .promo-baskets__text {
   margin: 0;
+  margin-bottom: 17px;
+}
+
+.promo-baskets__specifications {
+  width: 260px;
+  margin-bottom: 28px;
+
+  border-spacing: 0;
 }
 
 .promo-baskets__property {
+  padding-top: 8px;
+  padding-bottom: 7px;
+
   font: inherit;
+  text-align: left;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.promo-baskets__value {
+  padding-left: 19px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ececec;
+}
+
+.promo-baskets__wrapper-image {
+  margin-bottom: 28px;
+}
+
+.promo-baskets__image {
+  display: block;
 }
 
 .promo-baskets__price {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -40,24 +82,24 @@
     position: relative;
 
     .container-tablet();
+    margin-bottom: 70px;
   }
 
   .promo-baskets__wrapper-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 41px;
   }
 
   .promo-baskets__title {
-
     font-size: 43px;
     line-height: 50px;
   }
 
   .promo-baskets__subtitle {
     width: 100px;
-    padding-right: 30px;
+    padding-right: 27px;
 
     font-size: 17px;
     line-height: 17px;
@@ -66,29 +108,101 @@
 
   .promo-baskets__text {
     width: 285px;
+    margin-bottom: 34px;
 
     font-size: 17px;
     line-height: 30px;
   }
 
-  .promo-baskets__image {
+  .promo-baskets__wrapper-image {
     position: absolute;
     top: 110px;
     right: 50px;
+
+    width: 333px;
+    height: 404px;
+
+    background: rgba(210, 105, 30, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(210, 105, 30);
+  }
+
+  .promo-baskets__specifications {
+    margin-bottom: 57px;
+  }
+
+  .promo-baskets__price {
+    width: 292px;
+    margin-bottom: 35px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .promo-baskets__order {
+    width: 292px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo-baskets {
     .container-desktop();
+    margin-bottom: 100px;
   }
 
   .promo-baskets__wrapper-title {
     flex-direction: row-reverse;
     justify-content: flex-end;
+    margin-top: 55px;
   }
 
-  .promo-baskets__image {
+  .promo-baskets__subtitle {
+    margin-left: 46px;
+  }
+
+  .promo-baskets__title {
+    margin-left: 23px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .promo-baskets__text {
+    margin-left: 175px;
+    margin-bottom: 47px;
+  }
+
+  .promo-baskets__specifications {
+    margin-left: 173px;
+    margin-bottom: 107px;
+  }
+
+  .promo-baskets__property {
+    padding-top: 6px;
+    padding-bottom: 10px;
+  }
+
+  .promo-baskets__value {
+    padding-top: 6px;
+    padding-bottom: 10px;
+  }
+
+  .promo-baskets__price {
+    margin-left: 175px;
+  }
+
+  .promo-baskets__order {
+    margin-left: 175px;
+  }
+
+  .promo-baskets__wrapper-image {
+    top: 0;
+    right: 50px;
     z-index: -1;
+
+    width: 525px;
+    height: 636px;
+
+    background: rgba(210, 105, 30, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(210, 105, 30);
   }
 }
