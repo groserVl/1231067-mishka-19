@@ -115,9 +115,12 @@
         </ul>
       </section>
 
-      <section class="production-video container">
+      <section class="production-video">
         <h2 class="production-video__title">Процесс производства</h2>
         <img class="production-video__image" src="img/video-mobile@1x.jpg" width="260" height="150" alt="Видео о том, как появляются наши товары">
+        <button class="production-video__play-button">
+          <span class="visually-hidden">Воспроизведение видео</span>
+        </button>
         <p class="production-video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="production-video__order button" href="form.html">Сделать заказ</a>
       </section>
@@ -153,27 +156,29 @@
 
     <section class="modal-cart container">
       <h2 class="modal-cart__title">Добавить в корзину</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form class="modal-cart__form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="modal-cart__fieldset">
           <legend class="modal-cart__legend">Выберите размер:</legend>
           <ul class="modal-cart__list">
             <li class="modal-cart__small">
-              <input class="modal-cart__input" id="small" type="radio" name="size" value="small" checked>
+              <input class="visually-hidden modal-cart__input" id="small" type="radio" name="size" value="small" checked>
               <label class="modal-cart__label" for="small">S</label>
             </li>
             <li class="modal-cart__middle">
-              <input class="modal-cart__input" id="middle" type="radio" name="size" value="middle">
+              <input class="visually-hidden modal-cart__input" id="middle" type="radio" name="size" value="middle">
               <label class="modal-cart__label" for="middle">M</label>
             </li>
             <li class="modal-cart__long">
-              <input class="modal-cart__input" id="long" type="radio" name="size" value="long">
+              <input class="visually-hidden modal-cart__input" id="long" type="radio" name="size" value="long">
               <label class="modal-cart__label" for="long">L</label>
             </li>
           </ul>
-          <button class="modal-cart__button button button--cart" type="submit">Добавить</button>
         </fieldset>
+        <button class="modal-cart__button button button--cart" type="submit">Добавить</button>
       </form>
     </section>
+
+    <div class="modal-overlay"></div>
 
     <script src="js/main.js"></script>
 
