@@ -1,7 +1,14 @@
+.page-main {
+  overflow: hidden;
+}
+
 .page-main__title {
+  position: relative;
+
   margin: 0;
+  margin-bottom: 21px;
   padding-top: 70px;
-  padding-bottom: 75px;
+  padding-bottom: 76px;
 
   font-weight: 700;
   font-size: 27px;
@@ -14,19 +21,42 @@
 
 @media (min-width: @tablet-width) {
   .page-main__title {
-    padding-top: 37px;
-    padding-bottom: 78px;
+    margin-bottom: 73px;
+    padding-top: 35px;
+    padding-bottom: 80px;
 
     font-size: 43px;
     line-height: 50px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -13px;
+      right: 0;
+      left: 0;
+
+      height: 24px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__title {
-    padding-bottom: 100px;
+    margin-bottom: 123px;
+    padding-bottom: 102px;
 
     font-size: 53px;
     line-height: 57px;
+
+    &::after {
+      bottom: -9px;
+
+      background-size: 1150px auto;
+      background-repeat: repeat-x;
+    }
   }
 }

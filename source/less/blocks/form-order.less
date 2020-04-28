@@ -5,6 +5,7 @@
 }
 
 .form-order__fieldset {
+  margin: 0;
   padding: 0;
 
   border: 0;
@@ -27,6 +28,7 @@
   &::after {
     content: "";
 
+    display: block;
     flex-grow: 1;
 
     width: 10px;
@@ -37,14 +39,263 @@
   }
 }
 
+.form-order__item {
+  position: relative;
+
+  margin-bottom: 22px;
+}
+
 .form-order__label {
+  display: block;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
 }
 
-.form-order__fieldset-tel .form-order__input {
+// ТИП
+.form-order__type-list {
+  padding-top: 30px;
+  padding-left: 62px;
+  padding-bottom: 18px;
+}
+
+.form-order__radio + .form-order__label::before {
+  content: "";
+
+  position: absolute;
+  top: -7px;
+  left: -60px;
+
+  width: 38px;
+  height: 38px;
+
+  border: 2px solid #444444;
+  border-radius: 50%;
+}
+
+.form-order__radio:checked + .form-order__label::after {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: -49px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: #62d1ba;
+  border-radius: 50%;
+}
+
+// ЦВЕТ
+.form-order__legend-text--size.form-order__legend-text::after {
+  margin-left: 18px;
+}
+
+.form-order__color-list {
+  padding-top: 33px;
+  padding-bottom: 39px;
+}
+
+.form-order__color-list .form-order__label {
+  width: 180px;
+  padding-left: 62px;
+}
+
+.form-order__color-list .form-order__item {
+  margin-bottom: 41px;
+
+  &:nth-child(6) {
+    margin: 0;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -10px;
+    left: 0;
+    z-index: -1;
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid #444444;
+  }
+}
+
+.form-order__checkbox:checked + .form-order__label::before {
+  content: "";
+
+  position: absolute;
+  top: 13px;
+  left: 9px;
+
+  width: 10px;
+  height: 2px;
+
+  background-color: @black;
+
+  transform: rotate(45deg);
+}
+
+.form-order__checkbox:checked + .form-order__label::after {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: 13px;
+
+  width: 21px;
+  height: 2px;
+
+  background-color: @black;
+
+  transform: rotate(-45deg);
+}
+
+.form-order__radio:focus + .form-order__label::before {
+  border: 2px solid @blue;
+}
+
+.form-order__checkbox:focus + .form-order__label {
+  color: @blue;
+}
+
+// ФИО
+.form-order__name-list {
+  padding-top: 27px;
+}
+
+.form-order__name-list .form-order__item {
+  &:nth-child(3) {
+    margin: 0;
+  }
+}
+
+.form-order__name {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+
   font-size: 19px;
+  line-height: 25px;
+  color: @text;
+
+  border: none;
+  box-shadow: inset 0 -2px 0 @black;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 -2px 0 @blue;
+  }
+
+  &:active {
+    box-shadow: inset 0 -2px 0 @blue;
+  }
+}
+
+// ТЕЛ
+.form-order__fieldset-tel,
+.form-order__fieldset-email {
+  position: relative;
+  margin-top: 30px;
+}
+
+.form-order__fieldset-tel .form-order__input,
+.form-order__fieldset-email .form-order__input {
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 16px;
+
+  font-size: 19px;
+  color: @text;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+
+  border: none;
+  background-color: transparent;
+  box-shadow: inset 0 -2px 0 #000000;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 -2px 0 @blue;
+  }
+
+  &:active {
+    box-shadow: inset 0 -2px 0 @blue;
+  }
+}
+
+.form-order__tel-img {
+  position: absolute;
+  bottom: 15px;
+  right: 8px;
+  z-index: -1;
+
+  width: 26px;
+  height: 26px;
+
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.form-order__fieldset-tel .form-order__input:hover + .form-order__tel-img {
+  fill: #62d1ba;
+}
+
+.form-order__fieldset-tel .form-order__input:focus + .form-order__tel-img {
+  fill: #62d1ba;
+}
+
+// E-MAIL
+.form-order__fieldset-email .form-order__input {
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.form-order__email-img {
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  z-index: -1;
+
+  width: 32px;
+  height: 32px;
+}
+
+.form-order__email-img path {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.form-order__input-email:hover + .form-order__email-img path {
+  fill: #62d1ba;
+}
+
+.form-order__input-email:focus + .form-order__email-img path {
+  fill: #62d1ba;
+}
+
+// ДОП
+.form-order__fieldset-textarea {
+  margin-top: 31px;
+}
+
+.form-order__textarea {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px 15px 5px;
+
+  color: @text;
+
+  border: 2px solid #444444;
+
+  resize: none;
+
+  &:hover,
+  &:focus {
+    border: 2px solid #62d1ba;
+  }
 }
 
 .form-order__input::placeholder,
@@ -54,7 +305,14 @@
   color: rgba(68, 68, 68, 0.3);
 }
 
+.form-order__wrapper-bottom {
+  margin-top: 10px;
+}
+
 .form-order__correction {
+  margin: 0;
+  margin-bottom: 32px;
+
   font-size: 14px;
   line-height: 16px;
 }
@@ -65,13 +323,14 @@
 
     padding-left: 167px;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 46px;
   }
 
   .form-order__legend {
     position: absolute;
-    top: 50px;
-    right: 0;
+    top: 66px;
+    left: 0;
+    z-index: -1;
   }
 
   .form-order__legend-text {
@@ -84,34 +343,190 @@
     width: 500px;
   }
 
+  .form-order__label {
+    font-size: 19px;
+  }
+
+  // ТИП
+  .form-order__type-list {
+    padding-top: 14px;
+    padding-left: 80px;
+    padding-bottom: 0;
+  }
+
+  .form-order__type-list .form-order__item:nth-child(1) {
+    margin-bottom: 55px;
+  }
+
+  .form-order__radio + .form-order__label::before {
+    top: -15px;
+    left: -80px;
+
+    width: 52px;
+    height: 52px;
+  }
+
+  .form-order__radio:checked + .form-order__label::after {
+    top: 0;
+    left: -65px;
+
+    width: 22px;
+    height: 22px;
+  }
+
+  // ЦВЕТ
   .form-order__color-list {
     display: flex;
     flex-wrap: wrap;
     width: 500px;
+    padding-top: 15px;
+    padding-bottom: 20px;
   }
 
   .form-order__color-list .form-order__item {
-    width: 50%;
+    margin-bottom: 56px;
+
+    &:nth-child(odd) {
+      width: 52.1%;
+    }
+
+    &:nth-child(even) {
+      width: 47.9%;
+    }
+
+    &:nth-child(5) {
+      margin: 0;
+    }
+
+    &::before {
+      top: -15px;
+      left: 0;
+
+      width: 54px;
+      height: 52px;
+    }
   }
 
-  .form-order__label {
+  .form-order__checkbox:checked + .form-order__label::before {
+    top: 15px;
+    left: 9px;
 
+    width: 15px;
+    height: 2px;
+  }
+
+  .form-order__checkbox:checked + .form-order__label::after {
+    top: 11px;
+    left: 17px;
+
+    width: 29px;
+    height: 2px;
+  }
+
+  .form-order__color-list .form-order__label {
+    padding-left: 80px;
+  }
+
+  // ФИО
+  .form-order__name-list {
+    padding-top: 2px;
+  }
+
+  .form-order__name-list .form-order__item {
+    display: flex;
+    margin-bottom: 27px;
+  }
+
+  .form-order__name-list .form-order__label {
+    padding-top: 12px;
+    margin-right: 26px;
+  }
+
+  .form-order__name {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .form-order__input::placeholder,
+  .form-order__textarea::placeholder {
     font-size: 19px;
+    line-height: 20px;
   }
 
+  // ТЕЛ
   .form-order__fieldset-tel .form-order__input,
   .form-order__fieldset-email .form-order__input,
   .form-order__textarea {
     width: 500px;
   }
 
+  .form-order__fieldset-tel {
+    margin-top: 3px;
+    padding-bottom: 0;
+  }
+
+  .form-order__fieldset-tel .form-order__input {
+    padding-top: 14px;
+    padding-left: 16px;
+    padding-right: 70px;
+    padding-bottom: 17px;
+
+    letter-spacing: 0.1px;
+  }
+
+  .form-order__tel-img {
+    bottom: 17px;
+    right: 25px;
+  }
+
+  // E-MAIL
+  .form-order__fieldset-email {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .form-order__fieldset-email .form-order__legend {
+    top: 40px;
+    left: 1px;
+  }
+
+  .form-order__fieldset-email .form-order__input {
+    padding-top: 17px;
+    padding-left: 16px;
+    padding-right: 70px;
+    padding-bottom: 18px;
+  }
+
+  .form-order__email-img {
+    bottom: 60px;
+    right: 22px;
+  }
+
+  // ДОП
+  .form-order__fieldset-textarea {
+    margin: 0;
+    padding-bottom: 48px;
+  }
+
+  .form-order__textarea {
+    margin: 0;
+  }
+
   .form-order__wrapper-bottom {
     display: flex;
     justify-content: space-between;
+    margin: 0;
+  }
+
+  .form-order__button {
+    width: 230px;
   }
 
   .form-order__correction {
     order: 1;
+    margin: 0;
+    margin-top: 15px;
 
     font-size: 17px;
   }
@@ -138,16 +553,28 @@
 }
 
 @media (min-width: @desktop-width) {
+  .form-order__fieldset {
+    padding-left: 175px;
+  }
+
   .form-order__legend {
-    left: 65px;
+    left: 60px;
   }
 
+  // ЦВЕТ
   .form-order__color-list {
-    width: 750px;
+    width: 795px;
   }
 
-  .form-order__color-list .form-order__item {
-    width: 33%;
+  ul.form-order__color-list li.form-order__item {
+    &:nth-child(odd),
+    &:nth-child(even) {
+      width: 33%;
+    }
+
+    &:nth-child(4) {
+      margin: 0;
+    }
   }
 
   .form-order__item,
@@ -155,6 +582,25 @@
   .form-order__fieldset-email .form-order__input,
   .form-order__textarea {
     width: 700px;
+  }
+
+  // ТЕЛ
+  .form-order__tel-img {
+    right: 182px;
+  }
+
+  // EMAIL
+  .form-order__fieldset-email .form-order__legend {
+    left: 60px;
+  }
+
+  .form-order__email-img {
+    right: 180px;
+  }
+
+  // ДОП
+  .form-order__fieldset-textarea {
+    padding-bottom: 43px;
   }
 
   .form-order__wrapper-bottom {
