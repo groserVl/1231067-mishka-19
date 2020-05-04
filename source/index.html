@@ -77,37 +77,38 @@
         </div>
       </section>
 
-      <section class="promo-baskets container">
-        <div class="promo-baskets__wrapper-title">
-          <h2 class="promo-baskets__title">Вязаные корзинки</h2>
-          <p class="promo-baskets__subtitle">Товар недели</p>
+      <section class="promo-baskets">
+        <div class="promo-baskets__wrapper container">
+          <div class="promo-baskets__wrapper-title">
+            <h2 class="promo-baskets__title">Вязаные корзинки</h2>
+            <p class="promo-baskets__subtitle">Товар недели</p>
+          </div>
+          <p class="promo-baskets__text">Экологически чистая пряжа, <br> ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+          <table class="promo-baskets__specifications">
+            <caption class="visually-hidden">Характеристики вязанных корзинок</caption>
+            <tr>
+              <th class="promo-baskets__property">Цвет:</th>
+              <td class="promo-baskets__value">«Тиффани»/серый</td>
+            </tr>
+            <tr>
+              <th class="promo-baskets__property">Диаметр:</th>
+              <td class="promo-baskets__value">25 см</td>
+            </tr>
+            <tr>
+              <th class="promo-baskets__property">Высота:</th>
+              <td class="promo-baskets__value">15 см</td>
+            </tr>
+          </table>
+          <div class="promo-baskets__wrapper-image">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg, img/triple-set-tablet@2x.jpg 2x">
+              <img class="promo-baskets__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки - товар недели">
+            </picture>
+          </div>
+          <p class="promo-baskets__price">Цена: 990 руб.</p>
+          <a class="promo-baskets__order button" href="#">Заказать</a>
         </div>
-        <p class="promo-baskets__text">Экологически чистая пряжа, <br> ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="promo-baskets__specifications">
-          <caption class="visually-hidden">Характеристики вязанных корзинок</caption>
-          <tr>
-            <th class="promo-baskets__property">Цвет:</th>
-            <td class="promo-baskets__value">«Тиффани»/серый</td>
-          </tr>
-          <tr>
-            <th class="promo-baskets__property">Диаметр:</th>
-            <td class="promo-baskets__value">25 см</td>
-          </tr>
-          <tr>
-            <th class="promo-baskets__property">Высота:</th>
-            <td class="promo-baskets__value">15 см</td>
-          </tr>
-        </table>
-        <div class="promo-baskets__wrapper-image">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg, img/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg, img/triple-set-tablet@2x.jpg 2x">
-            <img class="promo-baskets__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки - товар недели">
-          </picture>
-
-        </div>
-        <p class="promo-baskets__price">Цена: 990 руб.</p>
-        <a class="promo-baskets__order button" href="#">Заказать</a>
       </section>
 
       <section class="about container">
@@ -154,7 +155,12 @@
           </p>
         </div>
         <div class="contacts__map">
-          <img class="contacts__map-image" src="img/map-mobile@1x.jpg" width="320" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          <iframe class="contacts__map-interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002815!2d30.320858715697543!3d59.93871916905466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1588356142762!5m2!1sru!2sru" width="320" height="457" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg, img/map-tablet@2x.jpg 2x">
+            <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          </picture>
         </div>
         <a class="contacts__write button" href="#">Напишите нам</a>
       </section>

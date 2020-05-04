@@ -1,5 +1,23 @@
 .reviews {
+  position: relative;
+
   margin-bottom: 46px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -52px;
+
+    height: 7px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-position: 8px 0;
+    background-size: 320px 7px;
+    background-repeat: repeat-x;
+  }
 }
 
 .reviews__title {
@@ -79,8 +97,6 @@
 
 @media (min-width: @tablet-width) {
   .reviews {
-    position: relative;
-
     margin-bottom: 38px;
     padding-bottom: 40px;
 
@@ -89,19 +105,12 @@
     background-repeat: no-repeat;
 
     &::after {
-      content: "";
+      bottom: 8px;
 
-      position: absolute;
-      right: 0;
-      left: 0;
-      bottom: 0;
+      height: 17px;
 
-      height: 23px;
-
-      background-image: url("../img/bg-zigzag-line.svg");
-      background-position: 20px 0;
-      background-size: 100%;
-      background-repeat: repeat-x;
+      background-position: 18px 0;
+      background-size: 768px 17px;
     }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -178,8 +187,11 @@
     padding-bottom: 65px;
 
     &::after {
-      bottom: -92px;
+      bottom: -90px;
 
+      height: 23px;
+
+      background-size: 1050px 23px;
       background-position: 25px 0;
     }
   }
