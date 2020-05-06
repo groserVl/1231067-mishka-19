@@ -21,12 +21,13 @@ navToggle.addEventListener('click', function() {
 
 // Modal for baskets
 
-
+if (butOrder) {
 butOrder.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalCart.classList.add('modal-cart--show');
   modalOverlay.classList.add('modal-overlay--show');
 });
+}
 
 modalOverlay.addEventListener('click', function(evt) {
   evt.preventDefault();
