@@ -3,6 +3,8 @@
   padding-bottom: 28px;
 
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+
+  transition: all 0.3s ease;
 }
 
 .search__link {
@@ -30,6 +32,18 @@
 
 .search__link-icon {
   margin-right: 26px;
+
+  transition: all 0.3s ease;
+
+  fill: rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    fill: rgba(99, 209, 187, 1);
+  }
+
+  &:active {
+    fill: rgba(99, 209, 187, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -17,6 +17,8 @@
   list-style: none;
   color: @black;
 
+  transition: all 0.3s ease;
+
   &:hover,
   &:focus {
     color: rgba(0, 0, 0, 0.6);
@@ -29,6 +31,18 @@
 
 .cart__link-icon {
   margin-right: 22px;
+
+  transition: all 0.3s ease;
+
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.cart__link:hover .cart__link-icon {
+  fill: rgba(99, 209, 187, 1);
+}
+
+.cart__link:active .cart__link-icon {
+  fill: rgba(99, 209, 187, 0.3);
 }
 
 @media (min-width: @tablet-width) {

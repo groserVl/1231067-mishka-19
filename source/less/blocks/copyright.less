@@ -3,11 +3,30 @@
   justify-content: flex-end;
 }
 
-.copyright__wrapper {
+.copyright__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 183px;
+
+  transition: all 0.3s ease;
+
+  outline: none;
+}
+
+.copyright__link:active {
+  opacity: 0.3;
+}
+
+.copyright__link-icon {
+  fill: @blue;
+
+  transition: all 0.3s ease;
+}
+
+.copyright__link:hover .copyright__link-icon,
+.copyright__link:focus .copyright__link-icon {
+  fill: #46c1ae;
 }
 
 .copyright__text {
@@ -16,13 +35,4 @@
   line-height: 20px;
   letter-spacing: 0.5px;
   color: @black;
-}
-
-.copyright__link--htmlacademy {
-  width: 30px;
-  height: 37px;
-
-  background-image: url("../img/logo-htmlacademy.svg");
-  background-repeat: no-repeat;
-  background-position: left bottom;
 }
