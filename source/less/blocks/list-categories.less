@@ -9,28 +9,42 @@
 }
 
 .list-categories__link {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   width: 320px;
   margin: 0 auto;
-  padding-top: 27px;
-  padding-bottom: 28px;
-  padding-left: 30px;
+  padding: 25px 35px 16px 28px;
 
   color: @bg;
 }
 
+.list-categories__item:last-child .list-categories__link {
+  padding-right: 28px;
+  padding-bottom: 19px;
+}
+
 .list-categories__link--interior-bg {
   background-color: @blue;
-  background-image: url("../img/icon-interior.svg");
-  background-repeat: no-repeat;
-  background-position: 86.8% center;
 }
 
 .list-categories__link--toys-bg {
   background-color: @darkblue;
-  background-image: url("../img/icon-toy.svg");
-  background-repeat: no-repeat;
-  background-position: 89% center;
+}
+
+.list-categories__icon {
+
+  transition: all 0.3s ease;
+
+  fill: rgba(20, 144, 128, 0.5);
+}
+
+.list-categories__link:hover .list-categories__icon,
+.list-categories__link:focus .list-categories__icon {
+  fill: rgba(20, 144, 128, 0.7);
+}
+
+.list-categories__link:active .list-categories__icon {
+  fill: rgba(20, 144, 128, 0.3);
 }
 
 .list-categories__text {
@@ -47,6 +61,10 @@
     width: 50%;
   }
 
+  .list-categories__item:last-child .list-categories__link {
+    padding-right: 35px;
+  }
+
   .list-categories__link {
     width: 100%;
     padding-top: 29px;
@@ -55,23 +73,27 @@
 
     font-size: 20px;
     line-height: 30px;
+
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+      margin-top: -5px;
+      margin-bottom: 5px;
+
+      outline: none;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   .list-categories__link--interior-bg {
-    background-position: 87% center;
-  }
-
-  .list-categories__link--toys-bg {
-    background-position: 87% center;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .list-categories__link--interior-bg {
-    background-position: 92% center;
-  }
-
-  .list-categories__link--toys-bg {
-    background-position: 92.5% center;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #59d5bc;
+    }
   }
 }
