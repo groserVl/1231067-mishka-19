@@ -4,7 +4,7 @@ var navToggle = document.querySelector('.main-nav__toggle');
 var butOrder = document.querySelector('.promo-baskets__order');
 var modalCart = document.querySelector('.modal-cart');
 var modalOverlay = document.querySelector('.modal-overlay');
-// var cardCart = document.querySelector('.card__cart');
+var cardCart = document.querySelectorAll('.card__cart');
 
 // Menu
 navMain.classList.remove('main-nav--nojs');
@@ -29,11 +29,22 @@ butOrder.addEventListener('click', function (evt) {
 });
 }
 
+if (cardCart) {
+for( var i = 0; i < cardCart.length; i++)
+  cardCart[i].addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modalCart.classList.add('modal-cart--show');
+    modalOverlay.classList.add('modal-overlay--show');
+});
+}
+
+if (modalOverlay) {
 modalOverlay.addEventListener('click', function(evt) {
   evt.preventDefault();
   modalCart.classList.remove('modal-cart--show');
   modalOverlay.classList.remove('modal-overlay--show');
 });
+}
 
 window.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27) {
