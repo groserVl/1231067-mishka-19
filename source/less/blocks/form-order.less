@@ -178,6 +178,11 @@
   }
 }
 
+.form-order__input {
+  transition: all 0.3s ease;
+  outline: none;
+}
+
 .form-order__name {
   display: block;
   width: 100%;
@@ -247,6 +252,7 @@
 
 .form-order__fieldset-tel .form-order__input:hover + .form-order__tel-img {
   fill: #62d1ba;
+  transition: all 0.3s ease;
 }
 
 .form-order__fieldset-tel .form-order__input:focus + .form-order__tel-img {
@@ -267,17 +273,16 @@
 
   width: 32px;
   height: 32px;
-}
 
-.form-order__email-img path {
   fill: rgba(0, 0, 0, 0.2);
 }
 
-.form-order__input-email:hover + .form-order__email-img path {
+.form-order__input-email:hover + .form-order__email-img {
   fill: #62d1ba;
+  transition: all 0.3s ease;
 }
 
-.form-order__input-email:focus + .form-order__email-img path {
+.form-order__input-email:focus + .form-order__email-img {
   fill: #62d1ba;
 }
 
