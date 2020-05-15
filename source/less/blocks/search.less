@@ -20,6 +20,8 @@
   list-style: none;
   color: @black;
 
+  outline: none;
+
   &:hover,
   &:focus {
     color: rgba(0, 0, 0, 0.6);
@@ -28,6 +30,10 @@
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
+}
+
+.search__link:focus .search__link-icon {
+  fill: rgba(99, 209, 187, 1);
 }
 
 .search__link-icon {
