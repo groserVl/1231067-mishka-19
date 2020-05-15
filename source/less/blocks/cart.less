@@ -18,6 +18,7 @@
   color: @black;
 
   transition: all 0.3s ease;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -37,7 +38,8 @@
   fill: rgba(0, 0, 0, 0.2);
 }
 
-.cart__link:hover .cart__link-icon {
+.cart__link:hover .cart__link-icon,
+.cart__link:focus .cart__link-icon {
   fill: rgba(99, 209, 187, 1);
 }
 
