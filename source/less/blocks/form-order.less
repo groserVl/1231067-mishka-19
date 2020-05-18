@@ -49,14 +49,14 @@
   display: block;
   font-weight: 700;
   font-size: 17px;
-  line-height: 20px;
+  line-height: 18px;
 }
 
 // ТИП
 .form-order__type-list {
-  padding-top: 30px;
+  padding-top: 32px;
   padding-left: 62px;
-  padding-bottom: 18px;
+  padding-bottom: 23px;
 }
 
 .form-order__radio + .form-order__label::before {
@@ -105,7 +105,7 @@
 }
 
 .form-order__color-list .form-order__item {
-  margin-bottom: 41px;
+  margin-bottom: 43px;
 
   &:nth-child(6) {
     margin: 0;
@@ -118,7 +118,7 @@
   left: 0;
 
   width: 40px;
-  height: 40px;
+  height: 39px;
 
   border: 2px solid #444444;
 
@@ -186,11 +186,12 @@
 .form-order__name {
   display: block;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 15px;
+  min-height: 52px;
+  padding-top: 13px;
+  padding-bottom: 13px;
 
-  font-size: 19px;
-  line-height: 25px;
+  font-size: 17px;
+  line-height: 18px;
   color: @text;
 
   border: none;
@@ -216,10 +217,11 @@
 .form-order__fieldset-tel .form-order__input,
 .form-order__fieldset-email .form-order__input {
   width: 100%;
-  padding-top: 19px;
-  padding-bottom: 16px;
+  min-height: 52px;
+  margin-top: 5px;
 
   font-size: 19px;
+  line-height: 20px;
   color: @text;
   text-transform: uppercase;
   letter-spacing: 0.9px;
@@ -261,8 +263,9 @@
 
 // E-MAIL
 .form-order__fieldset-email .form-order__input {
+  font-size: 17px;
+  line-height: 18px;
   text-transform: none;
-  letter-spacing: 0;
 }
 
 .form-order__email-img {
@@ -288,14 +291,17 @@
 
 // ДОП
 .form-order__fieldset-textarea {
-  margin-top: 31px;
+  margin-top: 30px;
 }
 
 .form-order__textarea {
   width: 100%;
+  min-height: 143px;
   margin-top: 22px;
   padding: 14px 15px 5px;
 
+  font-size: 17px;
+  line-height: 18px;
   color: @text;
 
   border: 2px solid #444444;
@@ -311,8 +317,6 @@
 
 .form-order__input::placeholder,
 .form-order__textarea::placeholder {
-  font-size: 17px;
-  line-height: 20px;
   color: rgba(68, 68, 68, 0.3);
 }
 
@@ -322,7 +326,7 @@
 
 .form-order__correction {
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 
   font-size: 14px;
   line-height: 16px;
@@ -333,8 +337,8 @@
     position: relative;
 
     padding-left: 167px;
-    padding-top: 50px;
-    padding-bottom: 46px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .form-order__legend {
@@ -360,13 +364,13 @@
 
   // ТИП
   .form-order__type-list {
-    padding-top: 14px;
+    padding-top: 17px;
     padding-left: 80px;
     padding-bottom: 0;
   }
 
   .form-order__type-list .form-order__item:nth-child(1) {
-    margin-bottom: 55px;
+    margin-bottom: 57px;
   }
 
   .form-order__radio + .form-order__label::before {
@@ -395,7 +399,7 @@
   }
 
   .form-order__color-list .form-order__item {
-    margin-bottom: 56px;
+    margin-bottom: 58px;
 
     &:nth-child(odd) {
       width: 52.1%;
@@ -408,14 +412,6 @@
     &:nth-child(5) {
       margin: 0;
     }
-
-    // &::before {
-    //   top: -15px;
-    //   left: 0;
-
-    //   width: 54px;
-    //   height: 52px;
-    // }
   }
 
   .form-order__label-field {
@@ -453,17 +449,20 @@
 
   .form-order__name-list .form-order__item {
     display: flex;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
   }
 
   .form-order__name-list .form-order__label {
-    padding-top: 12px;
+    padding-top: 15px;
     margin-right: 26px;
   }
 
   .form-order__name {
     padding-left: 16px;
     padding-right: 16px;
+
+    font-size: 19px;
+    line-height: 20px;
   }
 
   .form-order__input::placeholder,
@@ -480,17 +479,15 @@
   }
 
   .form-order__fieldset-tel {
-    margin-top: 3px;
+    margin-top: 0;
     padding-bottom: 0;
   }
 
   .form-order__fieldset-tel .form-order__input {
-    padding-top: 14px;
     padding-left: 16px;
     padding-right: 70px;
-    padding-bottom: 17px;
-
-    letter-spacing: 0.1px;
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
 
   .form-order__tel-img {
@@ -511,10 +508,11 @@
   }
 
   .form-order__fieldset-email .form-order__input {
-    padding-top: 17px;
+    margin-top: 3px;
     padding-left: 16px;
     padding-right: 70px;
-    padding-bottom: 18px;
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
 
   .form-order__email-img {
@@ -525,7 +523,7 @@
   // ДОП
   .form-order__fieldset-textarea {
     margin: 0;
-    padding-bottom: 48px;
+    padding-bottom: 50px;
   }
 
   .form-order__textarea {
@@ -545,9 +543,10 @@
   .form-order__correction {
     order: 1;
     margin: 0;
-    margin-top: 15px;
+    margin-top: 10px;
 
     font-size: 17px;
+    line-height: 30px;
   }
 
   .form-order__fieldset--gray {
@@ -578,6 +577,10 @@
 
   .form-order__legend {
     left: 62px;
+  }
+
+  .form-order__type-list {
+    padding-top: 16px;
   }
 
   // ЦВЕТ
@@ -619,6 +622,7 @@
 
   // ДОП
   .form-order__fieldset-textarea {
+    padding-top: 50px;
     padding-bottom: 43px;
   }
 
