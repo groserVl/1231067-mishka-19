@@ -1,6 +1,6 @@
 .copyright {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .copyright__link {
@@ -35,4 +35,10 @@
   line-height: 20px;
   letter-spacing: 0.5px;
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    justify-content: flex-end;
+  }
 }
